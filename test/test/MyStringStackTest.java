@@ -19,6 +19,7 @@ public class MyStringStackTest extends TestCase {
 	public MyStringStackTest(String name) {
 		super(name);
 	}
+	
 	@Before
 	public void setUp() throws Exception {
 		s1 = "Hello";
@@ -38,6 +39,10 @@ public class MyStringStackTest extends TestCase {
         stack.push (s2);
         assertFalse (stack.isEmpty());
 	}
+	
+	MyStringStack stack = new MyStringStack();
+	stack.push (s1);
+	assertTrue (stack.isEmpty());
 
 	@Test
 	public void testPop() {
